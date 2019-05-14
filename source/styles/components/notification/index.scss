@@ -1,0 +1,140 @@
+$font-awesome: 'fontawesome';
+$font-lato: 'Lato';
+
+section {
+    display: flex;
+    position: relative;
+    padding: 34px 92px 34px 48px;
+    border: 1px solid  $border-color-1;
+    border-radius: 10px;
+
+    &::before {
+        content: '\f12a';
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin-top: 7px;
+        margin-right: 28px;
+        border: 8px solid $border-color-2;
+        border-radius: 50%;
+        background-color: inherit;
+        color: $color-2-2;
+        font-family: $font-awesome;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    a::after {
+        content: '\f00d';
+        position: absolute;
+        top: 17px;
+        right: 18px;
+        color: $border-color-1;
+        font-family: $font-awesome;
+        font-size: 14px;
+    }
+
+    &.solid {
+        background-color: $color-2;
+
+        a::after {
+            content: '\f00d';
+            color: $color-2-2;
+        }
+    }
+
+    &.done {
+
+        &::before {
+            content: '\f00c';
+            border-color: $border-color-4;
+            color: $color-4-4;
+        }
+
+        &.solid {
+            background-color: $color-4;
+
+            a::after {
+                color: $color-4-4;
+            }
+        }
+    }
+
+    &.reject {
+
+        &::before {
+            content: '\f00d';
+            border-color: $border-color-5;
+            color: $color-5-5;
+        }
+
+        &.solid {
+            background-color: $color-5;
+
+            a::after {
+                color: $color-5-5;
+            }
+        }
+    }
+
+    &.flesh {
+
+        &::before {
+            content: '\f0e7';
+            border-color: $border-color-6;
+            color: $color-6-6;
+        }
+
+        &.solid {
+            background-color: $color-6;
+
+            a::after {
+                color: $color-6-6;
+            }
+        }
+    }
+
+    div {
+
+        h3 {
+            color: $color-0;
+            font-family: $font-lato;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 1.35px;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+
+        p {
+            padding-top: 5px;
+            color: $color-0;
+            font-family: $font-lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    &.info {
+        grid-column-end: 3;
+        grid-column-start: 1;
+
+        &::before {
+            content: '\f129';
+            border-color: $border-color-7;
+            color: $color-7-7;
+        }
+
+        &.solid {
+            background-color: $color-7;
+
+            a::after {
+                color: $color-7-7;
+            }
+        }
+    }
+}
